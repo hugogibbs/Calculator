@@ -1,6 +1,8 @@
 // create the screen and keyboard for the calculator
 const screen = document.createElement('div');
 const keyboard = document.createElement('div');
+screen.className = 'screen';
+keyboard.className = 'keyboard';
 screen.id = 'screen';
 keyboard.id = 'keyboard';
 
