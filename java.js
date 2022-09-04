@@ -1,3 +1,4 @@
+
 // create the screen and keyboard for the calculator
 const screen = document.createElement('div');
 const keyboard = document.createElement('div');
@@ -5,6 +6,91 @@ screen.className = 'screen';
 keyboard.className = 'keyboard';
 screen.id = 'screen';
 keyboard.id = 'keyboard';
+const result = document.createElement('div');
+result.className = 'result';
+result.id = 'result';
+
+result.textContent = 0;
+let operator = 0;
+let a = 0;
+let b = 0;
+let operate = 0;
+
+function calculator(n) {
+    
+    if (operator == 0){
+        if (result.textContent == 0){
+            result.textContent = "";
+    }
+        if (result.textContent.length != 8){
+            result.textContent += n;
+            a = parseFloat(result.textContent);
+            console.log(result.textContent);
+            console.log(a);
+    }
+        else {
+            return 1;
+        }
+    } 
+    if (operator !=0 && b==0 ) {
+        result.textContent = 0;
+    
+        if (result.textContent == 0){
+            result.textContent = "";
+        }   
+   
+    if (result.textContent.length != 8 && b == 0){
+            result.textContent += n;
+            b = parseFloat(result.textContent);
+            console.log(result.textContent);
+            console.log(b);
+        }
+    }
+        
+        else {
+            if (operator !=0 && b > 0) {
+                result.textContent += n;
+                b = parseFloat(result.textContent);
+                console.log(result.textContent);
+                console.log(b);
+            }
+            else {
+
+            
+            return 1;
+            }
+        }
+
+}
+
+
+
+
+function equal (a, b) {
+    
+    if (operator =='+'){
+        result.textContent = a + b;
+      
+    }
+
+    if (operator =='-'){
+        result.textContent = a - b;
+        
+        }
+    
+    if (operator =='x'){
+        result.textContent = a * b;
+       
+        }
+
+    if (operator =='/'){
+        result.textContent = a / b;
+       
+        }
+
+}
+
+
 
 // create rows that will be placed inside the keyboard
 const row1 = document.createElement('div');
@@ -85,7 +171,7 @@ button2.textContent= '2';
 button3.textContent = '3';
 buttonSum.textContent = '+';
 button0.textContent = '0';
-buttonComma.textContent = ',';
+buttonComma.textContent = '.';
 buttonequal.textContent = '=';
 
 //place screen and keyboard inside the container
@@ -130,6 +216,9 @@ document.getElementById('row5').appendChild(button0);
 document.getElementById('row5').appendChild(buttonComma);
 document.getElementById('row5').appendChild(buttonequal);
 
+document.getElementById('screen').appendChild(result);
+
+
 //receive input
 buttonAC.id = 'buttonAC'
 buttonSign.id = 'buttonSign';
@@ -152,79 +241,101 @@ buttonComma.id = 'buttonComma';
 buttonequal.id = 'buttonEqual';
 
 button1.addEventListener('click', e => {
-    console.log(1);
+    n = 1;
+    calculator(n);
 })
 
 button2.addEventListener('click', e => {
-    console.log(2);
+    n = 2;
+    calculator(n);
 })
 
 button3.addEventListener('click', e => {
-    console.log(3);
+    n = 3;
+    calculator(n);
 })
 
 button4.addEventListener('click', e => {
-    console.log(4);
+    n = 4;
+    calculator(n);
 })
 
 button5.addEventListener('click', e => {
-    console.log(5);
+    n = 5;
+    calculator(n);
 })
 
 button6.addEventListener('click', e => {
-    console.log(6);
+    n = 6;
+    calculator(n);
 })
 
 button7.addEventListener('click', e => {
-    console.log(7);
+    n = 7;
+    calculator(n);
 })
 
 button8.addEventListener('click', e => {
-    console.log(8);
+    n = 8;
+    calculator(n);
 })
 
 button9.addEventListener('click', e => {
-    console.log(9);
+    n = 9;
+    calculator(n);
 })
 
 button0.addEventListener('click', e => {
-    console.log(0);
+    n = 0;
+    calculator(n);
 })
 
 buttonEqual.addEventListener('click', e => {
     console.log('=');
+    operate = '=';
+    equal(a,b);
 })
 
 buttonSum.addEventListener('click', e => {
-    console.log('+');
+    operator = '+';
+    console.log(operator);
 })
 
 buttonSubstract.addEventListener('click', e=> {
-    console.log('-')
+    operator = '-';
 })
 
 buttonComma.addEventListener('click', e => {
-    console.log(',');
+    console.log('.');
+    n = '.';
+    calculator(n);
 })
 
 buttonMultiply.addEventListener('click', e => {
-    console.log('x');
+    operator = 'x';
 })
 
 buttonDivide.addEventListener('click', e => {
-    console.log('/');
+    operator = '/';
 })
 
 buttonPercentage.addEventListener('click', e => {
     console.log('%');
+    result.textContent = result.textContent / 100;
+    console.log(result.textContent);
 })
 
 buttonSign.addEventListener('click', e => {
-    console.log('+/-');
+    result.textContent = result.textContent * -1;
 })
 
 buttonAC.addEventListener('click', e => {
-    console.log('AC');
+    result.textContent = 0;
+    operator = 0;
+    a = 0;
+    b = 0;
+    operate = 0;
+
 })
 
 
