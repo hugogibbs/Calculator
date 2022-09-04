@@ -41,25 +41,31 @@ const button0 = document.createElement('button');
 const buttonComma = document.createElement('button');
 const buttonequal = document.createElement('button');
 
-buttonAC.className = 'buttonAC'
-buttonSign.className = 'buttonSign';
-buttonPercentage.className = 'buttonPercentage';
-buttonDivide.className = 'buttonDivide';
-button7.className = 'button7';
-button8.className = 'button8';
-button9.className = 'button9';
-buttonMultiply.className = 'buttonMultiply';
-button4.className = 'button4';
-button5.className = 'button5';
-button6.className = 'button6';
-buttonSubstract.className = 'buttonSubstract';
-button1.className = 'button1';
-button2.className = 'button2';
-button3.className = 'button3';
-buttonSum.className = 'buttonSum';
+buttonAC.className = 'buttonGray'
+buttonSign.className = 'buttonGray';
+buttonPercentage.className = 'buttonGray';
+buttonDivide.className = 'buttonOrange';
+button7.className = 'buttonDark';
+button8.className = 'buttonDark';
+button9.className = 'buttonDark';
+buttonMultiply.className = 'buttonOrange';
+button4.className = 'buttonDark';
+button5.className = 'buttonDark';
+button6.className = 'buttonDark';
+buttonSubstract.className = 'buttonOrange';
+button1.className = 'buttonDark';
+button2.className = 'buttonDark';
+button3.className = 'buttonDark';
+buttonSum.className = 'buttonOrange';
 button0.className = 'button0';
-buttonComma.className = 'buttonComma';
-buttonequal.className = 'buttonequal';
+buttonComma.className = 'buttonDark';
+buttonequal.className = 'buttonOrange';
+row1.className = 'row1'
+row2.className = 'row2'
+row3.className = 'row3'
+row4.className = 'row4'
+row5.className = 'row5'
+
 
 // add content to the buttons
 buttonAC.textContent = 'AC'
@@ -69,7 +75,7 @@ buttonDivide.textContent = '/';
 button7.textContent = '7';
 button8.textContent = '8';
 button9.textContent = '9';
-buttonMultiply.textContent = '*';
+buttonMultiply.textContent = 'x';
 button4.textContent = '4';
 button5.textContent = '5';
 button6.textContent = '6';
@@ -81,18 +87,17 @@ buttonSum.textContent = '+';
 button0.textContent = '0';
 buttonComma.textContent = ',';
 buttonequal.textContent = '=';
-screen.textContent = 'THIS IS THE SCREEN';
 
 //place screen and keyboard inside the container
 document.getElementById('container').appendChild(screen);
 document.getElementById('container').appendChild(keyboard);
 
 // place rows inside the keyboard
-document.getElementById('container').appendChild(row1);
-document.getElementById('container').appendChild(row2);
-document.getElementById('container').appendChild(row3);
-document.getElementById('container').appendChild(row4);
-document.getElementById('container').appendChild(row5);
+document.getElementById('keyboard').appendChild(row1);
+document.getElementById('keyboard').appendChild(row2);
+document.getElementById('keyboard').appendChild(row3);
+document.getElementById('keyboard').appendChild(row4);
+document.getElementById('keyboard').appendChild(row5);
 
 
 // place buttons inside the rows
@@ -124,3 +129,111 @@ document.getElementById('row4').appendChild(buttonSum);
 document.getElementById('row5').appendChild(button0);
 document.getElementById('row5').appendChild(buttonComma);
 document.getElementById('row5').appendChild(buttonequal);
+
+//receive input
+buttonAC.id = 'buttonAC'
+buttonSign.id = 'buttonSign';
+buttonPercentage.id = 'buttonPercentage';
+buttonDivide.id = 'buttonDivide';
+button7.id = 'button7';
+button8.id = 'button8';
+button9.id = 'button9';
+buttonMultiply.id = 'buttonMultiply';
+button4.id = 'button4';
+button5.id = 'button5';
+button6.id = 'button6';
+buttonSubstract.id = 'buttonSubstract';
+button1.id = 'button1';
+button2.id = 'button2';
+button3.id = 'button3';
+buttonSum.id = 'buttonSum';
+button0.id = 'button0';
+buttonComma.id = 'buttonComma';
+buttonequal.id = 'buttonEqual';
+
+button1.addEventListener('click', e => {
+    console.log(1);
+})
+
+button2.addEventListener('click', e => {
+    console.log(2);
+})
+
+button3.addEventListener('click', e => {
+    console.log(3);
+})
+
+button4.addEventListener('click', e => {
+    console.log(4);
+})
+
+button5.addEventListener('click', e => {
+    console.log(5);
+})
+
+button6.addEventListener('click', e => {
+    console.log(6);
+})
+
+button7.addEventListener('click', e => {
+    console.log(7);
+})
+
+button8.addEventListener('click', e => {
+    console.log(8);
+})
+
+button9.addEventListener('click', e => {
+    console.log(9);
+})
+
+button0.addEventListener('click', e => {
+    console.log(0);
+})
+
+buttonEqual.addEventListener('click', e => {
+    console.log('=');
+})
+
+buttonSum.addEventListener('click', e => {
+    console.log('+');
+})
+
+buttonSubstract.addEventListener('click', e=> {
+    console.log('-')
+})
+
+buttonComma.addEventListener('click', e => {
+    console.log(',');
+})
+
+buttonMultiply.addEventListener('click', e => {
+    console.log('x');
+})
+
+buttonDivide.addEventListener('click', e => {
+    console.log('/');
+})
+
+buttonPercentage.addEventListener('click', e => {
+    console.log('%');
+})
+
+buttonSign.addEventListener('click', e => {
+    console.log('+/-');
+})
+
+buttonAC.addEventListener('click', e => {
+    console.log('AC');
+})
+
+
+
+
+
+
+
+
+
+
+
