@@ -87,7 +87,6 @@ function equal (a, b) {
         result.textContent = a / b;
        
         }
-
 }
 
 
