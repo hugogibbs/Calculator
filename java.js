@@ -62,8 +62,6 @@ function calculator(n) {
 }
 
 
-
-
 function equal (n) {
     
     if (operator =='+'){
@@ -153,6 +151,185 @@ row2.className = 'row2'
 row3.className = 'row3'
 row4.className = 'row4'
 row5.className = 'row5'
+
+
+button1.addEventListener('mouseover', e => {
+    button1.style.background = 'lightgray';
+})
+
+
+button1.addEventListener('mouseout', e => {
+    button1.style.background = 'gray';
+})
+
+
+
+button2.addEventListener('mouseover', e => {
+    button2.style.background = 'lightgray';
+})
+
+
+button2.addEventListener('mouseout', e => {
+    button2.style.background = 'gray';
+})
+
+
+button3.addEventListener('mouseover', e => {
+    button3.style.background = 'lightgray';
+})
+
+
+button3.addEventListener('mouseout', e => {
+    button3.style.background = 'gray';
+})
+
+
+button4.addEventListener('mouseover', e => {
+    button4.style.background = 'lightgray';
+})
+
+
+button4.addEventListener('mouseout', e => {
+    button4.style.background = 'gray';
+})
+
+
+button5.addEventListener('mouseover', e => {
+    button5.style.background = 'lightgray';
+})
+
+
+button5.addEventListener('mouseout', e => {
+    button5.style.background = 'gray';
+})
+
+
+button6.addEventListener('mouseover', e => {
+    button6.style.background = 'lightgray';
+})
+
+button6.addEventListener('mouseout', e => {
+    button6.style.background = 'gray';
+})
+
+button7.addEventListener('mouseover', e => {
+    button7.style.background = 'lightgray';
+})
+
+
+button7.addEventListener('mouseout', e => {
+    button7.style.background = 'gray';
+})
+
+
+button8.addEventListener('mouseover', e => {
+    button8.style.background = 'lightgray';
+})
+
+
+button8.addEventListener('mouseout', e => {
+    button8.style.background = 'gray';
+})
+
+
+button9.addEventListener('mouseover', e => {
+    button9.style.background = 'lightgray';
+})
+
+
+button9.addEventListener('mouseout', e => {
+    button9.style.background = 'gray';
+})
+
+
+button0.addEventListener('mouseover', e => {
+    button0.style.background = 'lightgray';
+})
+
+button0.addEventListener('mouseout', e => {
+    button0.style.background = 'gray';
+})
+
+
+buttonComma.addEventListener('mouseover', e => {
+    buttonComma.style.background = 'lightgray';
+})
+
+buttonComma.addEventListener('mouseout', e => {
+    buttonComma.style.background = 'gray';
+})
+
+
+buttonAC.addEventListener('mouseover', e => {
+    buttonAC.style.background = 'white';
+})
+
+buttonAC.addEventListener('mouseout', e => {
+    buttonAC.style.background = 'lightgray';
+})
+
+
+buttonPercentage.addEventListener('mouseover', e => {
+    buttonPercentage.style.background = 'white';
+})
+
+buttonPercentage.addEventListener('mouseout', e => {
+    buttonPercentage.style.background = 'lightgray';
+})
+
+
+buttonSign.addEventListener('mouseover', e => {
+    buttonSign.style.background = 'white';
+})
+
+buttonSign.addEventListener('mouseout', e => {
+    buttonSign.style.background = 'lightgray';
+})
+
+
+
+buttonSum.addEventListener('mouseover', e => {
+    buttonSum.style.background = 'peachpuff';
+})
+
+buttonSum.addEventListener('mouseout', e => {
+    buttonSum.style.background = 'orange';
+})
+
+buttonSubstract.addEventListener('mouseover', e => {
+    buttonSubstract.style.background = 'peachpuff';
+})
+
+buttonSubstract.addEventListener('mouseout', e => {
+    buttonSubstract.style.background = 'orange';
+})
+
+buttonMultiply.addEventListener('mouseover', e => {
+    buttonMultiply.style.background = 'peachpuff';
+})
+
+buttonMultiply.addEventListener('mouseout', e => {
+    buttonMultiply.style.background = 'orange';
+})
+
+buttonDivide.addEventListener('mouseover', e => {
+    buttonDivide.style.background = 'peachpuff';
+})
+
+buttonDivide.addEventListener('mouseout', e => {
+    buttonDivide.style.background = 'orange';
+})
+
+
+buttonequal.addEventListener('mouseover', e => {
+    buttonequal.style.background = 'peachpuff';
+})
+
+buttonequal.addEventListener('mouseout', e => {
+    buttonequal.style.background = 'orange';
+})
+
+
 
 
 // add content to the buttons
