@@ -18,41 +18,40 @@ let operate = 0;
 
 function calculator(n) {
     
-    if (operator == 0){
+    if (operator == 0) {
         if (result.textContent == 0){
             result.textContent = "";
     }
         if (result.textContent.length != 8){
             result.textContent += n;
             a = parseFloat(result.textContent);
-            console.log(result.textContent);
-            console.log(a);
+            
     }
         else {
             return 1;
         }
     } 
-    if (operator !=0 && b==0 ) {
+    if (operator !=0 && b == 0) {
         result.textContent = 0;
-    
+
         if (result.textContent == 0){
             result.textContent = "";
         }   
-   
+
     if (result.textContent.length != 8 && b == 0){
-            result.textContent += n;
+        result.textContent += n;
             b = parseFloat(result.textContent);
-            console.log(result.textContent);
-            console.log(b);
+            
         }
     }
-        
+
         else {
             if (operator !=0 && b > 0) {
+                
                 result.textContent += n;
                 b = parseFloat(result.textContent);
-                console.log(result.textContent);
-                console.log(b);
+                
+            
             }
             else {
 
@@ -60,35 +59,39 @@ function calculator(n) {
             return 1;
             }
         }
-
 }
 
 
 
 
-function equal (a, b) {
+function equal (n) {
     
     if (operator =='+'){
-        result.textContent = a + b;
+        result.textContent = parseFloat(a) + parseFloat(b);
       
     }
 
     if (operator =='-'){
-        result.textContent = a - b;
+        result.textContent = parseFloat(a) - parseFloat(b);
         
         }
     
     if (operator =='x'){
-        result.textContent = a * b;
+        result.textContent = parseFloat(a) * parseFloat(b);
        
         }
 
     if (operator =='/'){
-        result.textContent = a / b;
+        result.textContent = parseFloat(a) / parseFloat(b);
        
         }
-}
 
+        a = parseFloat(result.textContent);
+        b = parseFloat(0);
+        console.log(a);
+        console.log(b);
+    
+}
 
 
 // create rows that will be placed inside the keyboard
