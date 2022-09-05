@@ -86,15 +86,21 @@ function equal (n) {
     }
 
     if (operator =='/'){
+        if (result.textContent < 7) {
+            result.textContent = (parseFloat(a) / parseFloat(b));
+        }
+        else {
+        
         result.textContent = (parseFloat(a) / parseFloat(b)).toFixed(6);
        
         }
 
+    }
         a = parseFloat(result.textContent);
         b = 0;
         console.log(a);
         console.log(b);
-
+    
     
 }
 
@@ -582,12 +588,12 @@ buttonComma.addEventListener('click', e => {
 })
 
 buttonMultiply.addEventListener('click', e => {
-    equal();
+    equal(n);
     operator = 'x';
 })
 
 buttonDivide.addEventListener('click', e => {
-    equal();
+    equal(n);
     operator = '/';
 })
 
