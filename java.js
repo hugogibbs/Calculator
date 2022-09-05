@@ -15,7 +15,6 @@ let operator = 0;
 let a = 0;
 let b = 0;
 let c = 0;
-let operate = 0;
 
 function calculator(n) {
     
@@ -607,7 +606,6 @@ buttonAC.addEventListener('click', e => {
     operator = 0;
     a = 0;
     b = 0;
-    operate = 0;
 
 })
 
