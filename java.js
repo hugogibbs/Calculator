@@ -14,6 +14,7 @@ result.textContent = 0;
 let operator = 0;
 let a = 0;
 let b = 0;
+let c = 0;
 let operate = 0;
 
 function calculator(n) {
@@ -63,8 +64,10 @@ function calculator(n) {
 
 
 function equal (n) {
-    
+
+
     if (operator =='+'){
+    
         result.textContent = parseFloat(a) + parseFloat(b);
       
     }
@@ -89,9 +92,10 @@ function equal (n) {
         }
 
         a = parseFloat(result.textContent);
-        b = parseFloat(0);
+        b = 0;
         console.log(a);
         console.log(b);
+
     
 }
 
@@ -423,6 +427,89 @@ button0.id = 'button0';
 buttonComma.id = 'buttonComma';
 buttonequal.id = 'buttonEqual';
 
+
+
+window.addEventListener('keydown', test, false);
+
+function test(e) {
+if (e.keyCode == "49") {
+    n = 1;
+    calculator(n);
+    }
+
+if (e.keyCode == "50") {
+    n = 2;
+    calculator(n);
+}    
+
+if (e.keyCode == "51") {
+    n = 3;
+    calculator(n);
+}   
+
+if (e.keyCode == "52") {
+    n = 4;
+    calculator(n);
+}   
+
+if (e.keyCode == "53") {
+    n = 5;
+    calculator(n);
+}   
+
+if (e.keyCode == "54") {
+    n = 6;
+    calculator(n);
+}   
+
+if (e.keyCode == "55") {
+    n = 7;
+    calculator(n);
+}   
+
+if (e.keyCode == "56") {
+    n = 8;
+    calculator(n);
+}   
+
+if (e.keyCode == "57") {
+    n = 9;
+    calculator(n);
+} 
+
+if (e.keyCode == "27") {
+    result.textContent = 0;
+    operator = 0;
+    a = 0;
+    b = 0;
+    operate = 0;
+}   
+
+if (e.keyCode == "190") {
+    console.log('.');
+    n = '.';
+    calculator(n);
+} 
+
+if (e.keyCode == "107") {
+    equal();
+    operator = '+';
+    console.log(operator);
+} 
+
+if (e.keyCode == "109") {
+    equal();
+    operator = '-';
+} 
+
+if (e.keyCode == "13") {
+    console.log('=');
+    equal(a,b);
+} 
+
+}
+
+
 button1.addEventListener('click', e => {
     n = 1;
     calculator(n);
@@ -475,19 +562,18 @@ button0.addEventListener('click', e => {
 
 buttonEqual.addEventListener('click', e => {
     console.log('=');
-    operate = '=';
     equal(a,b);
 })
 
 buttonSum.addEventListener('click', e => {
-    operator = '+';
     equal();
+    operator = '+';
     console.log(operator);
 })
 
 buttonSubstract.addEventListener('click', e=> {
+    equal();
     operator = '-';
-    equal(n);
 })
 
 buttonComma.addEventListener('click', e => {
@@ -497,10 +583,12 @@ buttonComma.addEventListener('click', e => {
 })
 
 buttonMultiply.addEventListener('click', e => {
+    equal();
     operator = 'x';
 })
 
 buttonDivide.addEventListener('click', e => {
+    equal();
     operator = '/';
 })
 
