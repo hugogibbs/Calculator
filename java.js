@@ -46,7 +46,7 @@ function calculator(n) {
     }
 
         else {
-            if (operator !=0 && b > 0) {
+            if (operator !=0 && b > 0 && result.textContent.length != 8) {
                 
                 result.textContent += n;
                 b = parseFloat(result.textContent);
@@ -76,11 +76,15 @@ function equal (n) {
     
     if (operator =='x'){
         result.textContent = parseFloat(a) * parseFloat(b);
+        
+        if (result.textContent.length >=7){
+        result.textContent = (parseFloat(a) * parseFloat(b)).toExponential(2);
        
-        }
+    }
+    }
 
     if (operator =='/'){
-        result.textContent = parseFloat(a) / parseFloat(b);
+        result.textContent = (parseFloat(a) / parseFloat(b)).toFixed(6);
        
         }
 
@@ -477,11 +481,13 @@ buttonEqual.addEventListener('click', e => {
 
 buttonSum.addEventListener('click', e => {
     operator = '+';
+    equal();
     console.log(operator);
 })
 
 buttonSubstract.addEventListener('click', e=> {
     operator = '-';
+    equal(n);
 })
 
 buttonComma.addEventListener('click', e => {
