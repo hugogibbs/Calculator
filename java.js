@@ -96,6 +96,7 @@ function equal (n) {
         }
 
     }
+
         a = parseFloat(result.textContent);
         b = 0;
         console.log(a);
