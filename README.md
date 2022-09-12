@@ -1,1 +1,1 @@
-This is my calculator project using as a reference the design of the iPhone Calculator
+This is my calculator project using as a reference the design of the iPhone iOs Calculator
